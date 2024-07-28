@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao HTML</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+      body {
+         font-family: 'Inter', sans-serif;
+            background-color: #F7F9FF; /* Fundo claro */
+            color: #333333; /* Roxo claro para o texto */
+         }
+         h1 {
+            border-bottom: 2px solid #4B0082; /* Adiciona uma linha roxa abaixo do h1 */
+            padding-bottom: 20px;
+            color: #4B0082; /* Cor roxa para o título */
+            font-size: 4em;
+        }
+        h1,h2, h5 {
+            margin-top: 20px;
+            color: #4B0082; /* Roxo escuro para os títulos */
+        }
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        code {
+         background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            display: block;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            font-family: 'Courier New', Courier, monospace; /* Fonte monoespaçada */
+        a {
+            color: #4B0082; /* Roxo para os links */
+            text-decoration: none; /* Remove sublinhado padrão */
+        }
+        a:hover {
+            text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+        }
+  </style>
+</head>
+<body>
+    <h1 >Introdução ao HTML</h1>
+        <h2 id="inicio">Índice</h2>
+            <ul>
+                <li><a href="#estrutura-basica">Estrutura Básica do HTML</a></li>
+                <li><a href="#Tags">Entendendo as Tags</a></li>
+                <li><a href="#textos">Estruturando Textos no HTML</a></li>
+                <li><a href="#Liastas">Listas Ordenadas e Não Ordenadas</a></li>
+                <li><a href="#links">Criando Links</a></li>
+
+            </ul>
+        <h2 id="estrutura-basica">Estrutura Básica do HTML</h2> <small><a href="#inicio">(Voltar)</a></small>
+                <p>O HTML (HyperText Markup Language) é a linguagem padrão para criar páginas web. Sua estrutura básica inclui a declaração do tipo de documento, a tag <html>, e dentro dela, as seções <head> e <body>. O <head> contém metadados e informações como o título da página, links para arquivos CSS, e outras configurações importantes. Já o <body> contém o conteúdo visível da página, como textos, imagens, links e outros elementos.</p>
+        <h2 id="#Tags">Entendendo as Tags</h2> <small><a href="#inicio">(Voltar)</a></small>
+                <p></p>
+                <h3>Atributos das Tags</h3>
+                <p>
+    
+                    <h4>Tag &lt;a&gt; (Anchor - Âncora)</h4>
+                    <p>A tag &lt;a&gt; é usada para criar links. Os atributos comuns incluem:</p>
+                    <p><strong>href:</strong> Define o URL para o qual o link aponta.<br>
+                       <strong>target:</strong> Define onde abrir o link. Os valores comuns são <em>_self</em> (abre na mesma aba) e <em>_blank</em> (abre em uma nova aba).</p>
+                    <p>Exemplo:<br>
+                    <code>&lt;a href="https://www.example.com" target="_blank"&gt;Visite Example&lt;/a&gt;</code></p>
+                    
+                    <h4>Tag &lt;img&gt; (Image - Imagem)</h4>
+                    <p>A tag &lt;img&gt; é usada para inserir imagens. Os atributos comuns incluem:</p>
+                    <p><strong>src:</strong> Define o caminho da imagem.<br>
+                       <strong>alt:</strong> Fornece um texto alternativo para a imagem, usado para acessibilidade e quando a imagem não pode ser exibida.<br>
+                       <strong>width:</strong> e <strong>height:</strong> Definem a largura e a altura da imagem, respectivamente.</p>
+                    <p>Exemplo:<br>
+                    <code>&lt;img src="imagem.jpg" alt="Descrição da imagem" width="300" height="200"&gt;</code></p>
+                    
+                    <h4>Tag &lt;input&gt; (Input - Entrada)</h4>
+                    <p>A tag &lt;input&gt; é usada em formulários para criar campos de entrada. Os atributos comuns incluem:</p>
+                    <p><strong>type:</strong> Define o tipo de campo (por exemplo, <em>text</em>, <em>password</em>, <em>submit</em>, <em>checkbox</em>, etc.).<br>
+                       <strong>name:</strong> Define o nome do campo, que é enviado com o formulário.<br>
+                       <strong>value:</strong> Define o valor inicial do campo.<br>
+                       <strong>placeholder:</strong> Fornece um texto de dica exibido dentro do campo quando está vazio.</p>
+                    <p>Exemplo:<br>
+                    <code>&lt;input type="text" name="nome" placeholder="Digite seu nome"&gt;<br>
+                    &lt;input type="password" name="senha" placeholder="Digite sua senha"&gt;<br>
+                    &lt;input type="submit" value="Enviar"&gt;</code></p>
+                    
+                    <h4>Tag &lt;button&gt; (Button - Botão)</h4>
+                    <p>A tag &lt;button&gt; é usada para criar botões clicáveis. Os atributos comuns incluem:</p>
+                    <p><strong>type:</strong> Define o tipo de botão (por exemplo, <em>button</em>, <em>submit</em>, <em>reset</em>).<br>
+                       <strong>onclick:</strong> Define uma função JavaScript a ser executada quando o botão é clicado.</p>
+                    <p>Exemplo:<br>
+                    <code>&lt;button type="button" onclick="alert('Botão clicado!')"&gt;Clique aqui&lt;/button&gt;<br>
+                    &lt;button type="submit"&gt;Enviar Formulário&lt;/button&gt;</code></p>
+                    
+                    <h4>Tag &lt;form&gt; (Formulário)</h4>
+                    <p>A tag &lt;form&gt; é usada para criar formulários de entrada de dados. Os atributos comuns incluem:</p>
+                    <p><strong>action:</strong> Define a URL para onde os dados do formulário serão enviados.<br>
+                       <strong>method:</strong> Define o método HTTP a ser usado ao enviar o formulário (<em>GET</em> ou <em>POST</em>).</p>
+                    <p>Exemplo:<br>
+                    <code>&lt;form action="/submit_form" method="post"&gt;<br>
+                    &nbsp;&nbsp;&lt;input type="text" name="nome"&gt;<br>
+                    &nbsp;&nbsp;&lt;input type="submit" value="Enviar"&gt;<br>
+                    &lt;/form&gt;</code></p>
+                    
+                    <h4>Tag &lt;div&gt; (Division - Divisão)</h4>
+                    <p>A tag &lt;div&gt; é usada como um contêiner genérico para agrupar outros elementos. Atributos comuns incluem:</p>
+                    <p><strong>id:</strong> Define um identificador único para o elemento.<br>
+                       <strong>class:</strong> Define uma ou mais classes de CSS para o elemento.</p>
+                    <p>Exemplo:<br>
+                    <code>&lt;div id="container" class="content-box"&gt;<br>
+                    &nbsp;&nbsp;&lt;p&gt;Este é um parágrafo dentro de uma div.&lt;/p&gt;<br>
+                    &lt;/div&gt;</code></p>
+                    
+                    <h4>Tag &lt;span&gt; (Span - Intervalo)</h4>
+                    <p>A tag &lt;span&gt; é usada para estilizar partes de um texto ou agrupar elementos inline. Os atributos comuns incluem:</p>
+                    <p><strong>id:</strong> Define um identificador único para o elemento.<br>
+                       <strong>class:</strong> Define uma ou mais classes de CSS para o elemento.</p>
+                    <p>Exemplo:<br>
+                    <code>&lt;p&gt;Este é um texto com uma &lt;span class="highlight"&gt;palavra destacada&lt;/span&gt;.&lt;/p&gt;</code></p>
+                </p>
+      <h2 id="textos">Estruturando Textos no HTML</h2> <small><a href="#inicio">(Voltar)</a></small>
+
+
+            <p>O HTML oferece várias tags que permitem estruturar e organizar textos de maneira eficaz dentro de uma página web. Abaixo estão algumas das principais tags e suas funções:</p>
+    
+         <h5>Tag &lt;p&gt; (Parágrafo)</h5>
+             <p>A tag &lt;p&gt; é usada para definir parágrafos. Um parágrafo é um bloco de texto que geralmente contém uma ideia completa. No HTML, os parágrafos são automaticamente seguidos por uma linha em branco, o que os separa dos outros elementos.</p>
+            <p>Exemplo:<br>
+            <code>&lt;p&gt;Este é um parágrafo de exemplo.&lt;/p&gt;</code></p>
+    
+          <h5>Tag &lt;br&gt; (Linha Quebrada)</h5>
+             <p>A tag &lt;br&gt; é usada para inserir uma quebra de linha. Ao contrário da tag &lt;p&gt;, a tag &lt;br&gt; não cria um novo bloco de texto, mas simplesmente move o texto após a tag para a linha seguinte.</p>
+             <p>Exemplo:<br>
+             <code>Primeira linha de texto&lt;br&gt;Segunda linha de texto</code></p>
+    
+         <h5>Tag &lt;h1&gt; a &lt;h6&gt; (Cabeçalhos)</h5>
+             <p>As tags &lt;h1&gt; a &lt;h6&gt; são usadas para definir cabeçalhos, que são títulos ou subtítulos de diferentes níveis. &lt;h1&gt; é o nível mais alto e geralmente é usado para o título principal da página, enquanto &lt;h6&gt; é o nível mais baixo.</p>
+            <p>Exemplo:<br>
+            <code>&lt;h1&gt;Título Principal&lt;/h1&gt;<br>
+             &lt;h2&gt;Subtítulo&lt;/h2&gt;<br>
+            &lt;h3&gt;Sub-subtítulo&lt;/h3&gt;</code></p>
+    
+         <h5>Tag &lt;strong&gt; e &lt;b&gt; (Negrito)</h5>
+            <p>As tags &lt;strong&gt; e &lt;b&gt; são usadas para destacar texto em negrito. A tag &lt;strong&gt; indica que o texto tem importância especial, enquanto a tag &lt;b&gt; simplesmente estiliza o texto em negrito sem nenhuma implicação adicional.</p>
+            <p>Exemplo:<br>
+            <code>&lt;strong&gt;Texto importante&lt;/strong&gt;<br>
+            &lt;b&gt;Texto em negrito&lt;/b&gt;</code></p>
+    
+         <h5>Tag &lt;em&gt; e &lt;i&gt; (Itálico)</h5>
+            <p>As tags &lt;em&gt; e &lt;i&gt; são usadas para estilizar texto em itálico. A tag &lt;em&gt; indica que o texto deve ser enfatizado, enquanto a tag &lt;i&gt; apenas estiliza o texto em itálico.</p>
+            <p>Exemplo:<br>
+            <code>&lt;em&gt;Texto enfatizado&lt;/em&gt;<br>
+             &lt;i&gt;Texto em itálico&lt;/i&gt;</code></p>
+    
+         <h5>Tag &lt;blockquote&gt; (Citação)</h5>
+            <p>A tag &lt;blockquote&gt; é usada para definir uma citação em bloco. Esse tipo de citação é geralmente exibido com um recuo em relação ao resto do texto, destacando-a.</p>
+            <p>Exemplo:<br>
+            <code>&lt;blockquote&gt;Esta é uma citação em bloco.&lt;/blockquote&gt;</code></p>
+    
+         <h5>Tag &lt;ul&gt; e &lt;ol&gt; (Listas)</h5>
+            <p>As tags &lt;ul&gt; (lista não ordenada) e &lt;ol&gt; (lista ordenada) são usadas para criar listas de itens. A tag &lt;ul&gt; cria uma lista com marcadores, enquanto a tag &lt;ol&gt; cria uma lista numerada.</p>
+            <p>Exemplo de lista não ordenada:<br>
+            <code>&lt;ul&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Item 1&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Item 2&lt;/li&gt;<br>
+            &lt;/ul&gt;</code></p>
+            <p>Exemplo de lista ordenada:<br>
+            <code>&lt;ol&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Primeiro item&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Segundo item&lt;/li&gt;<br>
+            &lt;/ol&gt;</code></p>
+    
+         <h5>Tag &lt;span&gt; (Span)</h5>
+            <p>A tag &lt;span&gt; é usada para agrupar partes de um texto para fins de estilização ou manipulação via JavaScript. Diferente das tags de bloco, como &lt;div&gt;, a tag &lt;span&gt; não cria uma nova linha.</p>
+            <p>Exemplo:<br>
+            <code>&lt;span class="highlight"&gt;Texto destacado&lt;/span&gt;</code></p>
+    
+
+
+
+      <h2 id="Liastas">Listas Ordenadas e Não Ordenadas</h2> <small><a href="#inicio">(Voltar)</a></small>
+
+   
+         <p>O HTML permite a criação de listas para organizar e exibir itens de maneira ordenada ou não ordenada. Existem três tipos principais de listas em HTML: listas não ordenadas, listas ordenadas e listas de descrição. Cada tipo de lista serve para diferentes propósitos e pode ser estilizado de várias maneiras.</p>
+    
+         <h5>Listas Não Ordenadas (&lt;ul&gt;)</h5>
+            <p>As listas não ordenadas são usadas para agrupar itens sem uma ordem específica. Cada item dentro de uma lista não ordenada é precedido por um marcador (ponto). A tag principal para criar uma lista não ordenada é &lt;ul&gt;, e cada item da lista é definido pela tag &lt;li&gt;.</p>
+            <p>Exemplo de uma lista não ordenada:</p>
+            <code>&lt;ul&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Item 1&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Item 2&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Item 3&lt;/li&gt;<br>
+            &lt;/ul&gt;</code>
+    
+         <h5>Listas Ordenadas (&lt;ol&gt;)</h5>
+            <p>As listas ordenadas são usadas para agrupar itens em uma ordem específica. Cada item dentro de uma lista ordenada é precedido por um número ou letra. A tag principal para criar uma lista ordenada é &lt;ol&gt;, e cada item da lista é definido pela tag &lt;li&gt;.</p>
+            <p>Exemplo de uma lista ordenada:</p>
+            <code>&lt;ol&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Primeiro item&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Segundo item&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Terceiro item&lt;/li&gt;<br>
+            &lt;/ol&gt;</code>
+    
+         <h5>Listas de Descrição (&lt;dl&gt;)</h5>
+            <p>As listas de descrição são usadas para listar termos e suas descrições. A tag principal para criar uma lista de descrição é &lt;dl&gt;. Dentro dela, cada termo é definido pela tag &lt;dt&gt; (definição de termo), e cada descrição é definida pela tag &lt;dd&gt; (descrição de definição).</p>
+            <p>Exemplo de uma lista de descrição:</p>
+            <code>&lt;dl&gt;<br>
+            &nbsp;&nbsp;&lt;dt&gt;HTML&lt;/dt&gt;<br>
+            &nbsp;&nbsp;&lt;dd&gt;Linguagem de marcação usada para criar páginas da web.&lt;/dd&gt;<br>
+            &nbsp;&nbsp;&lt;dt&gt;CSS&lt;/dt&gt;<br>
+            &nbsp;&nbsp;&lt;dd&gt;Linguagem de estilo usada para definir a aparência das páginas da web.&lt;/dd&gt;<br>
+            &lt;/dl&gt;</code>
+    
+         <p>As listas são ferramentas essenciais para organizar e estruturar conteúdo de forma clara e acessível. Elas podem ser estilizadas com CSS para melhorar a aparência e a usabilidade das páginas da web.</p>
+
+      <h2 id="links">Criando Links</h2> <small><a href="#inicio">(Voltar)</a></small>
+  
+       
+          <p>Links são elementos essenciais em páginas web, permitindo a navegação entre diferentes páginas e recursos na internet. Em HTML, os links são criados usando a tag &lt;a&gt; (âncora), que define uma ligação para outra página ou recurso. Aqui estão algumas formas de criar links e suas utilizações.</p>
+          
+          <h5>Link Básico</h5>
+          <p>O exemplo mais simples de um link é aquele que leva o usuário a outra página web. A tag &lt;a&gt; utiliza o atributo <code>href</code> para especificar o destino do link.</p>
+          <p>Exemplo de um link básico:</p>
+          <code>&lt;a href="https://www.example.com"&gt;Visite o Example&lt;/a&gt;</code>
+          <p>No exemplo acima, o texto "Visite o Example" será exibido como um link que, quando clicado, levará o usuário ao site "https://www.example.com".</p>
+          
+          <h5>Link Interno</h5>
+          <p>Links internos são usados para navegar dentro da mesma página. Eles podem ser úteis para criar um índice ou uma navegação que leva a diferentes seções da página.</p>
+          <p>Para criar um link interno, você precisa de um <code>id</code> no elemento de destino e um link que aponte para esse <code>id</code>.</p>
+          <p>Exemplo de um link interno:</p>
+          <code>
+              &lt;a href="#secao1"&gt;Ir para a Seção 1&lt;/a&gt;<br>
+              ...<br>
+              &lt;h2 id="secao1"&gt;Seção 1&lt;/h2&gt;
+          </code>
+          <p>No exemplo acima, o link "Ir para a Seção 1" levará o usuário à seção da página marcada com o <code>id="secao1"</code>.</p>
+          
+          <h5>Link para Download</h5>
+          <p>Links também podem ser usados para permitir o download de arquivos. Para isso, é comum utilizar o atributo <code>download</code> na tag &lt;a&gt;.</p>
+          <p>Exemplo de um link para download:</p>
+          <code>&lt;a href="arquivo.zip" download&gt;Baixar Arquivo&lt;/a&gt;</code>
+          <p>No exemplo acima, o link "Baixar Arquivo" permitirá que o usuário baixe o arquivo "arquivo.zip" ao invés de abrir o arquivo no navegador.</p>
+          
+          <h5>Link de E-mail</h5>
+          <p>Você pode criar links que abrem o cliente de e-mail do usuário para enviar uma mensagem para um endereço específico usando o prefixo <code>mailto:</code> no atributo <code>href</code>.</p>
+          <p>Exemplo de um link de e-mail:</p>
+          <code>&lt;a href="mailto:exemplo@email.com"&gt;Enviar e-mail&lt;/a&gt;</code>
+          <p>No exemplo acima, clicar no link "Enviar e-mail" abrirá o cliente de e-mail do usuário com uma nova mensagem endereçada a "exemplo@email.com".</p>
+          
+          <h5>Link com Atributo <code>target</code></h5>
+          <p>O atributo <code>target</code> especifica onde abrir o documento vinculado. O valor mais comum para este atributo é <code>_blank</code>, que abre o link em uma nova aba ou janela do navegador.</p>
+          <p>Exemplo de link com <code>target="_blank"</code>:</p>
+          <code>&lt;a href="https://www.example.com" target="_blank"&gt;Abrir Example em nova aba&lt;/a&gt;</code>
+          <p>No exemplo acima, clicar no link "Abrir Example em nova aba" abrirá o site "https://www.example.com" em uma nova aba do navegador.</p>
+          
+          <p>Os links são ferramentas poderosas em HTML que permitem uma navegação eficiente e intuitiva na web. Ao aprender a criar e usar links de diferentes tipos, você pode melhorar significativamente a usabilidade e a funcionalidade de suas páginas web.</p>
+      
+          <small><a href="#inicio">(Voltar)</a></small>
+
+          <hr>
+</body>
+</html>
